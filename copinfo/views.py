@@ -1,7 +1,11 @@
 from django.http.response import HttpResponse, HttpResponseNotFound,HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import exceptions
+<<<<<<< HEAD
 from .models import Cop,Data
+=======
+from .models import Cop
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 def info_view(request):
     if request.method=='GET':
         return render(request,'cop/info.html')
@@ -10,11 +14,15 @@ def info_view(request):
         a=copname
         try:
             cop=Cop.objects.get(copname=copname)
+<<<<<<< HEAD
             data=Data.objects.get(industry=cop.industry)
+=======
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
         except Exception as e:
             print('not exist%s'%(e))
             return render(request,'cop/info.html',locals())
 
+<<<<<<< HEAD
         if float(cop.solvency)>data.solvency:
             ana1="1.The EBITDA/interest expense ratio of the company is larger than the industry average, which means that the company's annual net operating income is sufficient to cover the annual interest expense and the company's short-term debt solvency is stronger than other companies in the same industry.  "
         if float(cop.solvency)<data.solvency:
@@ -49,6 +57,9 @@ def info_view(request):
             ana8="8.The company's asset-liability ratio is lower than the industry average, financial risks are relatively low, and the company's asset structure is healthy.  "
 
 
+=======
+        
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
         return render(request,'cop/info.html',locals())
         
         

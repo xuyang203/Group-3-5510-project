@@ -24,5 +24,8 @@ urlpatterns = [
     path('index',index_views.index_view),
     path('cop/',include('copinfo.urls')),
     path('home', index_views.home_view),
+<<<<<<< HEAD
     path('rating/', include('rating.urls')),
+=======
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 ]

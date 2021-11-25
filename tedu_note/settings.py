@@ -41,13 +41,20 @@ INSTALLED_APPS = [
     'user',
     'index',
     'copinfo',
+<<<<<<< HEAD
     'rating'
+=======
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+<<<<<<< HEAD
+=======
+ #   'django.middleware.csrf.CsrfViewMiddleware',
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

@@ -23,7 +23,11 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
     <!-- Preloader -->
+<<<<<<< HEAD
     <div class="spinner-wrapper">
+=======
+	<div class="spinner-wrapper">
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
@@ -40,15 +44,24 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
+<<<<<<< HEAD
             <a class="navbar-brand logo-image">
                 <h1 class="text-white">IntelliRate</h1>
             </a>
+=======
+            <a class="navbar-brand logo-image" href="http://127.0.0.1:8000/home"><img
+                    src="{% static 'tedu_note/images/logo.svg' %}" alt="alternative"></a>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                 </ul>
                 <span class="nav-item">
+<<<<<<< HEAD
                     <a class="btn-outline-sm" href="log">LOG IN</a>
+=======
+                    <a class="btn-outline-sm" href="http://127.0.0.1:8000/user/log">LOG IN</a>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                 </span>
             </div>
         </div> <!-- end of container -->
@@ -60,26 +73,46 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Sign Up</h1>
+<<<<<<< HEAD
                     <p>Fill out the form below to create your account. <br> Already have an account? Click Log In.
+=======
+                    <p>Fill out the form below to sign up for Tivo. <br> Already signed up? Click Log In at top right.
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                     </p>
                     <div class="form-container">
                         <form action='/user/reg' method='post'>
                             <div class="form-group">
+<<<<<<< HEAD
                                 <input type="text" class="form-control-input" autocomplete="off" name="username">
                                 <label class="label-control" for="username">Username</label>
+=======
+                                <!--用户名：<input type='text' name='username'> -->
+                                <input type="text" class="form-control-input" name="username">
+                                <label class="label-control" for="username">username</label>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                                 <div class="help-block with-errors"></div>
                             </div>
 
                             <div class="form-group">
 
+<<<<<<< HEAD
                                 <input type="password" class="form-control-input" autocomplete="off" name="password_1">
                                 <label class="label-control" for="password_1">Password</label>
+=======
+                                <input type="password" class="form-control-input" name="password_1">
+                                <label class="label-control" for="password_1">password</label>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
 
+<<<<<<< HEAD
                                 <input type="password" class="form-control-input" autocomplete="off" name="password_2">
                                 <label class="label-control" for="password_2">Confirm password</label>
+=======
+                                <input type="password" class="form-control-input" name="password_2">
+                                <label class="label-control" for="password_2">confirm password</label>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
@@ -88,6 +121,7 @@
 
                         </form>
                     </div>
+<<<<<<< HEAD
                 </div>
             </div>
         </div>
@@ -164,4 +198,21 @@
     <script src="{% static 'tedu_note/js/validator.min.js' %}"></script>
     <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="{% static 'tedu_note/js/scripts.js' %}"></script> <!-- Custom scripts -->
+=======
+
+                    <script src="{% static 'tedu_note/js/jquery.min.js' %}"></script>
+                    <!-- jQuery for Bootstrap's JavaScript plugins -->
+                    <script src="{% static 'tedu_note/js/popper.min.js' %}"></script>
+                    <!-- Popper tooltip library for Bootstrap -->
+                    <script src="{% static 'tedu_note/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+                    <script src="{% static 'tedu_note/js/jquery.easing.min.js' %}"></script>
+                    <!-- jQuery Easing for smooth scrolling between anchors -->
+                    <script src="{% static 'tedu_note/js/swiper.min.js' %}"></script>
+                    <!-- Swiper for image and text sliders -->
+                    <script src="{% static 'tedu_note/js/jquery.magnific-popup.js' %}"></script>
+                    <!-- Magnific Popup for lightboxes -->
+                    <script src="{% static 'tedu_note/js/validator.min.js' %}"></script>
+                    <!-- Validator.js - Bootstrap plugin that validates forms -->
+                    <script src="{% static 'tedu_note/js/scripts.js' %}"></script> <!-- Custom scripts -->
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 </body>

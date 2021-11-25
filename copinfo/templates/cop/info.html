@@ -24,7 +24,11 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
     <!-- Preloader -->
+<<<<<<< HEAD
     <div class="spinner-wrapper">
+=======
+	<div class="spinner-wrapper">
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
@@ -42,9 +46,14 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
+<<<<<<< HEAD
             <a class="navbar-brand logo-image">
                 <h1 class="text-white">IntelliRate</h1>
             </a>
+=======
+            <a class="navbar-brand logo-image" href="http://127.0.0.1:8000/home"><img
+                    src="{% static 'tedu_note/images/logo.svg' %}" alt="alternative"></a>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -57,6 +66,7 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link page-scroll" href="/home">HOME <span
                                 class="sr-only">(current)</span></a>
                     </li>
@@ -68,12 +78,26 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="info">COMPANY SEARCH</a>
+=======
+                        <a class="nav-link page-scroll" href="http://127.0.0.1:8000/home">HOME <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="http://127.0.0.1:8000/cop/info">Rating</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="http://127.0.0.1:8000/cop/info">Rating History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="http://127.0.0.1:8000/cop/info">Company Search</a>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                     </li>
                 </ul>
             </div>
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
+<<<<<<< HEAD
 
     {% if cop.copinfo %}
     <header id="header" class="ex-2-header">
@@ -114,16 +138,88 @@
             </div>
         </div>
         {% elif a %}
+=======
+    <!--
+    <div class="form-container">
+    <form action='/cop/info' method='post'>
+        <p>
+            公司名称：<input type='text' name='copname' value='{{cop.copname}}' >
+            <input type='submit' value='查询' >
+        </p>
+  </form>
+</div>
+  <p>
+      {% if cop.copinfo %}
+      {{cop.copinfo}}
+      {% else %}
+      未找到结果
+      {% endif %}
+
+  </p>
+  -->
+        
+    {% if cop.copinfo %}  
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <h1>About {{copname}}</h1>
+                </div>
+                <div class="col-sm-12 mt-3 bg-white rounded">
+                    <div class = "p-5 text-muted">
+                        <h2>Company Background</h2> 
+                        <h7>{{cop.copinfo}}</h7>
+                    </div>
+                </div>
+                <div class="col-sm-12 mt-5 bg-white rounded">
+                    <div class = "p-5 text-muted">
+                        <h2>Credit History</h2> 
+                        <h7>{{cop.creditlevel}}</h7>
+                    </div>
+                </div>
+                <a class="btn-solid-reg page-scroll pt-4" href="http://127.0.0.1:8000/cop/info">Search More</a> 
+            </div>
+        </div>
+    {% elif a %}
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Company Search</h1>
+                    <p>Not Found <br> Search the background!</p>
+                    <!-- Sign Up Form -->
+                    <div class="form-container">
+                        <form action='/cop/info' method='post'>
+                            <div class="form-group">
+                                <input type='text' class="form-control-input" name="copname" value='{{cop.copname}}'>
+                                <label class="label-control" for="copname" placeholder = "google">Company Name</label>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button" value='查询'>SUBMIT</button>
+                            </div>      
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
         <header id="header" class="ex-2-header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Company Search</h1>
+<<<<<<< HEAD
                         <p>The company you entered is not in our database<br> Enter another name</p>
+=======
+                        <p>Please input <br> Search the background!</p>
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                         <!-- Sign Up Form -->
                         <div class="form-container">
                             <form action='/cop/info' method='post'>
                                 <div class="form-group">
+<<<<<<< HEAD
                                     <input type='text' class="form-control-input" autocomplete="off" name="copname"
                                         value='{{cop.copname}}'>
                                     <label class="label-control" for="copname" placeholder="google">Company Name</label>
@@ -132,11 +228,21 @@
                                 <div class="form-group">
                                     <button type="submit" class="form-control-submit-button" value='查询'>SUBMIT</button>
                                 </div>
+=======
+                                    <input type='text' class="form-control-input" name="copname" value='{{cop.copname}}'>
+                                    <label class="label-control" for="copname" placeholder = "google">Company Name</label>
+                                </div>
+    
+                                <div class="form-group">
+                                    <button type="submit" class="form-control-submit-button" value='查询'>SUBMIT</button>
+                                </div>      
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             {% else %}
             <header id="header" class="ex-2-header">
                 <div class="container">
@@ -183,4 +289,23 @@
     <script src="{% static 'tedu_note/js/validator.min.js' %}"></script>
     <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="{% static 'tedu_note/js/scripts.js' %}"></script> <!-- Custom scripts -->
+=======
+        {% endif %}
+            
+
+        
+        <!-- Scripts -->
+        <script src="{% static 'tedu_note/js/jquery.min.js' %}"></script>
+        <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="{% static 'tedu_note/js/popper.min.js' %}"></script> <!-- Popper tooltip library for Bootstrap -->
+        <script src="{% static 'tedu_note/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+        <script src="{% static 'tedu_note/js/jquery.easing.min.js' %}"></script>
+        <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="{% static 'tedu_note/js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+        <script src="{% static 'tedu_note/js/jquery.magnific-popup.js' %}"></script>
+        <!-- Magnific Popup for lightboxes -->
+        <script src="{% static 'tedu_note/js/validator.min.js' %}"></script>
+        <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="{% static 'tedu_note/js/scripts.js' %}"></script> <!-- Custom scripts -->
+>>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 </body>
