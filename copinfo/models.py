@@ -1,17 +1,11 @@
 from django.db import models
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 class Cop(models.Model):
     copname = models.CharField('公司名称',max_length=30,unique=True)
     copinfo = models.TextField('公司简介',default='')
     #create_time = models.DateTimeField('创建时间',auto_now_add=True)
     #update_time = models.DateTimeField('更新时间',auto_now=True)
     creditlevel = models.TextField('信用水平',default='')
-<<<<<<< HEAD
     industry = models.TextField('行业',default='')
     solvency = models.TextField('solvency',default='')
     profitmargin = models.TextField('profitmargin',default='')
@@ -38,9 +32,8 @@ class Data(models.Model):
     debtratio = models.FloatField('debtratio',default='')
     roegrowth = models.FloatField('roegrowth',default='')
 # Create your models here.
-=======
+
 
     def _str_(self):
         return 'copname %s'%(self.copname)
->>>>>>> af6a9cf2b0bf30d3186e3d7555bee2131c53e321
 # Create your models here.
