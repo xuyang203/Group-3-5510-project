@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Website Title -->
+    <title>Log In</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="/static/tedu_note/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/fontawesome-all.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/magnific-popup.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/styles.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/swiper.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'tedu_note/images/favicon.png' %}">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image">
+                <h1 class="text-white">IntelliRate</h1>
+            </a>
+
+
+            <span class="nav-item">
+                <a class="btn-outline-sm" href="reg">SIGN UP</a>
+            </span>
+        </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Log In</h1>
+                    <p>Don't have an account with us? <br> Click Sign Up to create your account.</p>
+                    <!-- Sign Up Form -->
+                    <div class="form-container">
+                        <form action='/user/log' method='post'>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control-input" autocomplete="off" name="username">
+                                <label class="label-control" for="username">Username</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="password" class="form-control-input" autocomplete="off" name="password">
+                                <label class="label-control" for="password">Password</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">LOG IN</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col first">
+                        <h4>About IntelliRate</h4>
+                        <p class="p-small">We're passionate about designing and developing one of the best credit rating
+                            platform in the market</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>About us</h4>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">CUHK FTEC 5510 Class Project</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Looking forward to take our project into the real world</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Read our <a class="white" href="#your-link">Terms &
+                                        Conditions</a>, <a class="white" href="#your-link">Privacy Policy</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Contact</h4>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="media-body">The Chinese University of Hong Kong, Central Ave, Shatin, N.T.
+                                    Hong Kong</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-envelope"></i>
+                                <div class="media-body"><a class="white"
+                                        href="#your-link">contact@intellirate.com</a><br></div>
+                                <i class="fas fa-globe"></i>
+                                <div class="media-body"><a class="white" href="#your-link">www.intellirate.com</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <script src="{% static 'tedu_note/js/jquery.min.js' %}"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'tedu_note/js/popper.min.js' %}"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="{% static 'tedu_note/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'tedu_note/js/jquery.easing.min.js' %}"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'tedu_note/js/swiper.min.js' %}"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="{% static 'tedu_note/js/jquery.magnific-popup.js' %}"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'tedu_note/js/validator.min.js' %}"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{% static 'tedu_note/js/scripts.js' %}"></script> <!-- Custom scripts -->
+</body>

@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Website Title -->
+    <title>Company Search</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="/static/tedu_note/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/fontawesome-all.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/swiper.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/magnific-popup.css" rel="stylesheet">
+    <link href="/static/tedu_note/css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'tedu_note/images/favicon.png' %}">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image">
+                <h1 class="text-white">IntelliRate</h1>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/home">HOME <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="info">RATING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="info">RATING HISTORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="info">COMPANY SEARCH</a>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+    {% if cop.copinfo %}
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-left">
+                    <h1>About {{copname}}</h1>
+                </div>
+                <div class="col-sm-12 mt-3 bg-white rounded text-left">
+                    <div class="p-5 text-muted">
+                        <h2>Company Background</h2>
+                        <h7>{{cop.copinfo}}</h7>
+                    </div>
+                </div>
+                <div class="col-sm-12 mt-5 bg-white rounded text-left">
+                    <div class="p-5 text-muted">
+                        <h2>Credit History</h2>
+                        <h7>{{cop.creditlevel}}</h7>
+                    </div>
+                </div>
+                <div class="col-sm-12 mt-5 bg-white rounded text-left">
+                    <div class="p-5 text-muted">
+                        <h2>Analysis</h2>
+                        <h7>
+                            {{ana1}}<br>
+                            {{ana2}}<br>
+                            {{ana3}}<br>
+                            {{ana4}}<br>
+                            {{ana5}}<br>
+                            {{ana6}}<br>
+                            {{ana7}}<br>
+                            {{ana8}}<br>
+                            {{ana9}}<br>
+                        </h7>
+                    </div>
+                </div>
+                <a class="btn-solid-reg page-scroll p-5" href="info">Search More</a>
+            </div>
+        </div>
+        {% elif a %}
+        <header id="header" class="ex-2-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Company Search</h1>
+                        <p>The company you entered is not in our database<br> Enter another name</p>
+                        <!-- Sign Up Form -->
+                        <div class="form-container">
+                            <form action='/cop/info' method='post'>
+                                <div class="form-group">
+                                    <input type='text' class="form-control-input" autocomplete="off" name="copname"
+                                        value='{{cop.copname}}'>
+                                    <label class="label-control" for="copname" placeholder="google">Company Name</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="form-control-submit-button" value='查询'>SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <header id="header" class="ex-2-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1>Company Search</h1>
+                            <p>Please enter the company you want to search <br> After that click SUBMIT</p>
+                            <!-- Sign Up Form -->
+                            <div class="form-container">
+                                <form action='/cop/info' method='post'>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control-input" autocomplete="off" name="copname"
+                                            value='{{cop.copname}}'>
+                                        <label class="label-control" for="copname" placeholder="google">Company
+                                            Name</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control-submit-button"
+                                            value='查询'>SUBMIT</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </header>
+    </header>
+    {% endif %}
+
+    <!-- Scripts -->
+    <script src="{% static 'tedu_note/js/jquery.min.js' %}"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'tedu_note/js/popper.min.js' %}"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="{% static 'tedu_note/js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'tedu_note/js/jquery.easing.min.js' %}"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'tedu_note/js/swiper.min.js' %}"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="{% static 'tedu_note/js/jquery.magnific-popup.js' %}"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'tedu_note/js/validator.min.js' %}"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{% static 'tedu_note/js/scripts.js' %}"></script> <!-- Custom scripts -->
+</body>

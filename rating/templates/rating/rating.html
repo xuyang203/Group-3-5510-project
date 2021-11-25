@@ -1,0 +1,52 @@
+<head>
+    <title>
+        rating
+    </title>
+</head>
+
+
+<form action='/rating/rating' method='post'>
+    <div class="form-group">
+        <input type='text' class="form-control-input" autocomplete="off" name="Ltd"
+            value='{{rating.Ltd}}'>
+        <label class="label-control" for="Ltd" placeholder="google">Ltd</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="EBITDA"
+            value='{{rating.EBITDA}}'>
+        <label class="label-control" for="EBITDA" placeholder="google">EBITDA</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Cag"
+            value='{{rating.Cag}}'>
+        <label class="label-control" for="Cag" placeholder="google">Cag</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Pol"
+            value='{{rating.Pol}}'>
+        <label class="label-control" for="Pol" placeholder="google">Pol</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Roe"
+            value='{{rating.Roe}}'>
+        <label class="label-control" for="Roe" placeholder="google">Roe</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Se"
+            value='{{rating.Se}}'>
+        <label class="label-control" for="Se" placeholder="google">Se</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="OP"
+            value='{{rating.OP}}'>
+        <label class="label-control" for="OP" placeholder="google">OP</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="It"
+            value='{{rating.It}}'>
+        <label class="label-control" for="It" placeholder="google">It</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Cat"
+            value='{{rating.Cat}}'>
+        <label class="label-control" for="Cat" placeholder="google">Cat</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Ncf"
+            value='{{rating.Ncf}}'>
+        <label class="label-control" for="Ncf" placeholder="google">Ncf</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Ibd"
+            value='{{rating.Ibd}}'>
+        <label class="label-control" for="Ibd" placeholder="google">Ibd</label>
+        <input type='text' class="form-control-input" autocomplete="off" name="Alr"
+            value='{{rating.Alr}}'>
+        <label class="label-control" for="Alr" placeholder="google">Alr</label>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="form-control-submit-button" value='评级'>SUBMIT</button>
+        <br>评级结果：{{y}}
+    </div>
+</form>
