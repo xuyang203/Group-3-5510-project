@@ -13,3 +13,4 @@
 
 2021年11月25日 週四 21時49分26秒 HKT.     🐑增加了评级模块
 
+https://cdn.jsdelivr.net/gh/changfengoss/pub@main/data/2022_04_01/gtPnqW.yaml
